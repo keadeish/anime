@@ -1,38 +1,239 @@
-.App {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: MAL;
+  src: url(./fonts/AGRevueCyr\ Roman\ Medium.ttf);
+}
+
+body,
+html {
+  background-color: #f0e5c7;
+  /* background-color: white; */
+  margin: 0
+}
+
+#header,
+#header2,
+#sidebar,
+#footer {
+  z-index: 5;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0
+}
+
+
+#header,
+#footer {
+  right: 0
+}
+
+#header {
+  z-index: 5;
+  /* max-height: 8%; */
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: MAL;
+  /* font-size: 300%; */
+  font-size: 4vh;
+  /* font-size: 16px; */
+  /* font-size: 5vw; */
+  /* color: blue; */
+  color: #3d423a;
+  /* text-overflow: clip; */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10;
+  /* padding-top: 0.5%; */
   text-align: center;
+  /* background-color: lightblue; */
+  background-color: #f5b8af;
+  height: 6vh
+    /* height: 100px */
+    /* height: 14vh; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#header:hover {
+  text-shadow: 0 0 5px #ff0000
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+#footer {
+  text-align: center;
+  background-color: #f5b8af;
+  bottom: 0;
+  /* height: 30px */
+  height: 2vh 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#content {
+  padding-left: 0%;
+  /* padding-top: 130px; */
+  padding-bottom: 30px
+}
+
+#heading {
+  font-size: 150%;
+}
+
+#ukiyo {
+  border: 1px solid black;
+  object-fit: cover;
+  object-position: center;
+  /* object-position: top left; */
+  /* object-position: right; */
+  /* object-position: top; */
+  /* padding-top: 6rem; */
+  /* padding-bottom: 10%; */
+  width: 100%;
+  height: 100vh;
+  /* max-height: 50cm; */
+  outline: green;
+  background-size: auto;
+  background-position: center;
+}
+
+#centered {
+  z-index: 1;
+  font-size: 130%;
+  max-height: 20%;
+  width: 35vh;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #f0e5c7;
+  color: black;
+  border: 5px solid #3d392c;
+  padding: 1%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+#centered:hover,
+#centered2:hover,
+#centered3:hover {
+  background: #f5b8af;
+}
+
+#centered2 {
+  z-index: 1;
+  font-size: 130%;
+  max-height: 20%;
+  width: 35vh;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #f0e5c7;
+  color: black;
+  border: 5px solid #3d392c;
+  padding: 1%;
+  position: absolute;
+  top: 26.7%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+#centered3 {
+  z-index: 1;
+  font-size: 130%;
+  max-height: 20%;
+  width: 35vh;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #f0e5c7;
+  color: black;
+  border: 5px solid #3d392c;
+  padding: 1%;
+  position: absolute;
+  top: 73.3%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.links {
+  color: #06212a;
+}
+
+.links:hover {
+  text-decoration: underline;
+
+
+}
+
+#image-background {
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#subheading {
+  font-family: MAL;
+  font-size: 200%;
+  text-align: center;
+  color: #3d423a;
+
+  padding-top: 6vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.accordion {
+  /* background-color: white; */
+  width: 85vw;
+  /* height: 70vh; */
 }
+
+.item {
+  border: 1px solid #06212a;
+  background-color: #3d423a;
+  /* margin-top: 13vh; */
+  margin-top: 5vh;
+  /* margin-bottom: 10vh; */
+  margin-bottom: 10px;
+  padding: 10px 20px;
+}
+
+.title {
+  font-size: 3vh;
+  font-family: mal;
+  color: #f5b8af;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.title:hover {
+  text-shadow: 0 0 5px #ff0000;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.description {
+  color: bisque;
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.description.show {
+  height: auto;
+  max-height: 500px;
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+#collapse {
+  color: #f5b8af;
+}
+
+/* .spacer {
+    padding-top: 100vh;
+} */
