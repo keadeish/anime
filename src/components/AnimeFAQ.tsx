@@ -33,4 +33,4 @@ export function AnimeFAQ(): JSX.Element {
 
 //fix the minus button changing colours
 //export faq
-const faqData = [{ question: "What is Anime?", answer: whatIsAnime }, { question: "What is Manga?", answer: whatIsManga }, { question: "Why Anime?", answer: whyAnime }, { question: "I don't like anime", answer: iDontLikeAnime }]
+const faqData = [{ question: "What is Anime?", answer: whatIsAnime }, { question: "What is Manga?", answer: whatIsManga }, { question: "Why Anime?", answer: whyAnime }, { question: "I don't like Anime", answer: iDontLikeAnime }]

@@ -35,31 +35,19 @@ html {
 }
 
 #header {
-  /* box-shadow: 0 8px 6px -6px black; */
   border: 0;
-  /* opacity: 95%; */
   z-index: 5;
-  /* max-height: 8%; */
   overflow: hidden;
   white-space: nowrap;
   font-family: MAL;
-  /* font-size: 300%; */
   font-size: 4vh;
-  /* font-size: 16px; */
-  /* font-size: 5vw; */
-  /* color: blue; */
   color: #3d423a;
-  /* text-overflow: clip; */
   margin-left: auto;
   margin-right: auto;
   padding: 10;
-  /* padding-top: 0.5%; */
   text-align: center;
-  /* background-color: lightblue; */
   background-color: #f5b8af;
   height: 6vh
-    /* height: 100px */
-    /* height: 14vh; */
 }
 
 #header:hover {
@@ -232,8 +220,8 @@ html {
 .description.show {
   font-size: auto;
   height: auto;
-  max-height: 500px;
-  /* max-height: 5vh; */
+  /* max-height: 500px; */
+  max-height: 30vh;
   transition: all 0.5s cubic-bezier(1, 0, 1, 0);
 }
 

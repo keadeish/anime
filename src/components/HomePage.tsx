@@ -25,9 +25,9 @@ export function HomePage(): JSX.Element {
         <div id="header">KAL</div>
         <div id="image-background">
             <img id="ukiyo" src="/images/ukiyo.png" alt="" />
-            <div id="centered"><b>{episodesWatched}</b> Episodes watched</div>
-            <div id="centered2"><b>{daysConsumed}</b> Days consumed</div>
-            <div id="centered3"><b>{chaptersRead}</b> Chapters read</div>
+            <div id="centered"><b>{episodesWatched.toLocaleString("en-US")}</b> Episodes Watched</div>
+            <div id="centered2"><b>{Math.round(daysConsumed).toLocaleString("en-US")}</b> Days Consumed</div>
+            <div id="centered3"><b>{chaptersRead.toLocaleString("en-US")}</b> Chapters Read</div>
         </div>
         <div id="footer"> <a className="links" href="https://github.com/keadeish">GitHub </a>| <a className="links" href="https://twitter.com/Psypreme">Twitter</a> | <a className="links" href="https://www.instagram.com/psychician/">Instagram</a> | <a className="links" href="https://myanimelist.net/profile/Jump_Reaper">MAL</a></div>
     </>
