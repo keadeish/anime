@@ -24,7 +24,7 @@ export function HomePage(): JSX.Element {
     return <>
         <div id="header">KAL</div>
         <div id="image-background">
-            <img id="ukiyo" src="/images/ukiyo.png" alt="" />
+            <img id="ukiyo" src="/images/ukiyojpg.jpg" alt="" />
             <div id="centered"><b>{episodesWatched.toLocaleString("en-US")}</b> Episodes Watched</div>
             <div id="centered2"><b>{Math.round(daysConsumed).toLocaleString("en-US")}</b> Days Consumed</div>
             <div id="centered3"><b>{chaptersRead.toLocaleString("en-US")}</b> Chapters Read</div>
