@@ -22,7 +22,7 @@ export function HomePage(): JSX.Element {
     }, [])
 
     const handleClick = () => {
-        window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+        window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" }); ////scrolls to the bottom of the page
     }
 
     return <>
