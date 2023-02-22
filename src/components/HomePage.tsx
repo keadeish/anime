@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../App.css";
 import { IUserData } from "../utils/animeStructure";
 export function HomePage(): JSX.Element {
@@ -21,6 +21,10 @@ export function HomePage(): JSX.Element {
         UserInfo();
     }, [])
 
+    const handleClick = () => {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    }
+
     return <>
         <div id="header">KAL</div>
         <div id="image-background">
@@ -28,7 +32,7 @@ export function HomePage(): JSX.Element {
             <div id="centered"><b>{episodesWatched.toLocaleString("en-US")}</b> Episodes Watched</div>
             <div id="centered2"><b>{Math.round(daysConsumed).toLocaleString("en-US")}</b> Days Consumed</div>
             <div id="centered3"><b>{chaptersRead.toLocaleString("en-US")}</b> Chapters Read</div>
-            <img id="arrow" src="/images/chevron.svg" alt="" />
+            <img id="arrow" src="/images/chevron.svg" alt="" onClick={handleClick} />
 
         </div>
         <div id="footer"> <a className="links" href="https://github.com/keadeish">GitHub </a>| <a className="links" href="https://twitter.com/Psypreme">Twitter</a> | <a className="links" href="https://www.instagram.com/psychician/">Instagram</a> | <a className="links" href="https://myanimelist.net/profile/Jump_Reaper">MAL</a></div>
