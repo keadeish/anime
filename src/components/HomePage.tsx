@@ -32,7 +32,7 @@ export function HomePage(): JSX.Element {
             <div id="centered"><b>{episodesWatched.toLocaleString("en-US")}</b> Episodes Watched</div>
             <div id="centered2"><b>{Math.round(daysConsumed).toLocaleString("en-US")}</b> Days Consumed</div>
             <div id="centered3"><b>{chaptersRead.toLocaleString("en-US")}</b> Chapters Read</div>
-            <img id="arrow" src="/images/chevron.png" alt="" onClick={handleClick} />
+            <img id="arrow" src="/images/chevron.svg" alt="" onClick={handleClick} />
 
         </div>
         <div id="footer"> <a className="links" href="https://github.com/keadeish">GitHub </a>| <a className="links" href="https://twitter.com/Psypreme">Twitter</a> | <a className="links" href="https://www.instagram.com/psychician/">Instagram</a> | <a className="links" href="https://myanimelist.net/profile/Jump_Reaper">MAL</a></div>
