@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import "../App.css";
 import { IUserData } from "../utils/animeStructure";
 export function HomePage(): JSX.Element {
