@@ -1,13 +1,13 @@
-import './App.css'
-import { AnimeFAQ } from './components/AnimeFAQ';
-import { AnimeQuiz } from './components/AnimeQuiz';
+import "./App.css";
+import { AnimeFAQ } from "./components/AnimeFAQ";
 import { HomePage } from "./components/HomePage";
 function App(): JSX.Element {
-  return <>
-    <HomePage />
-    <AnimeFAQ />
-    {/* <AnimeQuiz /> */}
-  </>
+  return (
+    <>
+      <HomePage />
+      <AnimeFAQ />
+    </>
+  );
 }
 
 export default App;
