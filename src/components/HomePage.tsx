@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import "../App.css";
 import { IUserData } from "../utils/animeStructure";
+import { Footer } from "./Footer";
+import { Header } from "./Header";
 export function HomePage(): JSX.Element {
     const [daysConsumed, setDaysConsumed] = useState(Number)
     const [episodesWatched, setEpisodesWatched] = useState(Number)
     const [chaptersRead, setChaptersRead] = useState(Number)
-    async function UserInfo() {
 
+    async function UserInfo() {
         const response = await fetch("https://api.jikan.moe/v4/users/Jump_Reaper/full");
         const userDataJSON: IUserData = await response.json();
         const daysConsumed: IUserData | number = userDataJSON.data.statistics.anime.days_watched + userDataJSON.data.statistics.manga.days_read;
@@ -26,7 +28,7 @@ export function HomePage(): JSX.Element {
     }
 
     return <>
-        <div id="header">KAL</div>
+        <Header />
         <div id="image-background">
             <img id="ukiyo" src="/images/ukiyojpg.jpg" alt="" />
             <div id="centered"><b>{episodesWatched.toLocaleString("en-US")}</b> Episodes Watched</div>
@@ -35,7 +37,7 @@ export function HomePage(): JSX.Element {
             <img id="arrow" src="/images/chevron.svg" alt="" onClick={handleClick} />
 
         </div>
-        <div id="footer"> <a className="links" href="https://github.com/keadeish">GitHub </a>| <a className="links" href="https://twitter.com/Psypreme">Twitter</a> | <a className="links" href="https://www.instagram.com/psychician/">Instagram</a> | <a className="links" href="https://myanimelist.net/profile/Jump_Reaper">MAL</a></div>
+        <Footer />
     </>
 }
 // CHANGE FOOTER LOCATION
