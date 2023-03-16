@@ -7,8 +7,8 @@ export function HomePage(): JSX.Element {
     const [daysConsumed, setDaysConsumed] = useState(Number)
     const [episodesWatched, setEpisodesWatched] = useState(Number)
     const [chaptersRead, setChaptersRead] = useState(Number)
-    async function UserInfo() {
 
+    async function UserInfo() {
         const response = await fetch("https://api.jikan.moe/v4/users/Jump_Reaper/full");
         const userDataJSON: IUserData = await response.json();
         const daysConsumed: IUserData | number = userDataJSON.data.statistics.anime.days_watched + userDataJSON.data.statistics.manga.days_read;
