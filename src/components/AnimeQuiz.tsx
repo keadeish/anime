@@ -2,12 +2,20 @@ import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { characterStructure } from "../utils/characterStructure";
 import { useEffect, useState } from "react";
+import { IUserStructure } from "../utils/userStructure";
 
 export function AnimeQuiz(): JSX.Element {
   const [firstAnime, setFirstAnime] = useState("");
   const [firstAnimeImage, setFirstAnimeImage] = useState("");
   const [secondAnime, setSecondAnime] = useState("");
   const [secondAnimeImage, setSecondAnimeImage] = useState("");
+
+  async function userUpdates() { //testing for user data
+    const response = await fetch("https://api.jikan.moe/v4/users/{username}/userupdates")
+    const userUpdatesJSON: IUserStructure | unknown = response.json()
+
+  }
+
 
   async function characterData() {
     const response = await fetch("https://api.jikan.moe/v4/top/characters");
