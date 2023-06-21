@@ -10,7 +10,7 @@ export function HomePage(): JSX.Element {
 
   async function UserInfo() {
     const response = await fetch(
-      "https://api.jikan.moe/v4/users/Jump_Reaper/full"
+      "https://api.jikan.moe/v4/users/jump_reaper/full"
     );
     const userDataJSON: IUserData = await response.json();
     const daysConsumed: IUserData | number =
@@ -20,6 +20,7 @@ export function HomePage(): JSX.Element {
       userDataJSON.data.statistics.anime.episodes_watched;
     const totalChaptersRead: IUserData | number =
       userDataJSON.data.statistics.manga.chapters_read;
+    console.log(userDataJSON.data.statistics.manga.days_read)
     setDaysConsumed(daysConsumed);
     setEpisodesWatched(episodesWatched);
     setChaptersRead(totalChaptersRead);

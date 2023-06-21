@@ -178,14 +178,20 @@ html {
 }
 
 @media screen and (max-width: 1000px) {
+
   #centered,
   #centered3,
   #centered2 {
     font-size: 100%;
   }
+
+  #arrow {
+    width: 7vh;
+  }
 }
 
 @media screen and (orientation: landscape) and (min-device-width: 219px) and (max-device-width: 1200px) and (max-device-height: 1000px) {
+
   #centered,
   #centered3,
   #centered2 {
