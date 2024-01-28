@@ -60,4 +60,3 @@ export function HomePage(): JSX.Element {
     </>
   );
 }
-// CHANGE FOOTER LOCATION
