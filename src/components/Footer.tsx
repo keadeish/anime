@@ -10,7 +10,7 @@ export function Footer(): JSX.Element {
         Twitter
       </a>{" "}
       |{" "}
-      <a className="links" href="https://www.instagram.com/psychician/">
+      <a className="links" href="https://www.instagram.com/keadeish/">
         Instagram
       </a>{" "}
       |{" "}
