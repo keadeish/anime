@@ -6,7 +6,7 @@ export function Footer(): JSX.Element {
         GitHub{" "}
       </a>
       |{" "}
-      <a className="links" href="https://twitter.com/Psypreme">
+      <a className="links" href="https://twitter.com/psychician">
         Twitter
       </a>{" "}
       |{" "}
