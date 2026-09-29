@@ -40,14 +40,14 @@ export function HomePage(): JSX.Element {
       <div id="image-background">
         <img id="ukiyo" src="/images/ukiyojpg.jpg" alt="" />
         <div id="centered">
-          <b>{episodesWatched.toLocaleString("en-US")}13,745</b> Episodes Watched
+          <b>13,745</b> Episodes Watched
         </div>
         <div id="centered2">
-          <b>{Math.round(daysConsumed).toLocaleString("en-US")}303</b> Days
+          <b>303</b> Days
           Consumed
         </div>
         <div id="centered3">
-          <b>{chaptersRead.toLocaleString("en-US")}9,930</b> Chapters Read
+          <b>9,930</b> Chapters Read
         </div>
         <img
           id="arrow"
